@@ -2,9 +2,13 @@
 const express= require('express');
 // call the express server in a constant app
 const app= express();
+
 // define the port
 // by default website run on port 80 when we deploy it to a server
 const port=8000;
+
+// use export router
+app.use('/',require('./routes'));
 
 
 // need to make the app listen
