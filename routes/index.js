@@ -7,6 +7,14 @@ const homeController= require('../controllers/home_controller');
 
 // get access to the home_controller home action
 router.get('/', homeController.home);
+// require other routes
+router.use('/users', require('./users'));
+router.use('/posts', require('./posts'));
+
+// for any further routes
+//  router.use('/routerName',require('./routerFile);
+
+
 
 
 
