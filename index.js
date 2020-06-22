@@ -10,6 +10,10 @@ const port=8000;
 // use export router
 app.use('/',require('./routes'));
 
+// for setting up the viewEngine ejs
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
 
 // need to make the app listen
 app.listen(port, function(err){
