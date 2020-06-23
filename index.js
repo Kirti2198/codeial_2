@@ -6,6 +6,17 @@ const app= express();
 // define the port
 // by default website run on port 80 when we deploy it to a server
 const port=8000;
+// require the express layout
+const expressLayout= require('express-ejs-layouts');
+// middleware to access static files
+app.use(express.static('./assets'));
+// tell app to use the layout
+app.use(expressLayout);
+
+// extract style and scripts from subpages into the layouts
+app.set("layout extractStyles", true);
+app.set("layout extractScripts", true);
+
 
 // use export router
 app.use('/',require('./routes'));
