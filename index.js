@@ -8,6 +8,8 @@ const app= express();
 const port=8000;
 // require the express layout
 const expressLayout= require('express-ejs-layouts');
+
+const mongoose = require('./config/mongoose');
 // middleware to access static files
 app.use(express.static('./assets'));
 // tell app to use the layout
